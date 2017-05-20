@@ -1,0 +1,205 @@
+.banner {
+	height: 65vh;
+	background-image: url('../images/header-mobile.jpg');
+
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-up(md) {
+		background-image: url('../images/header-desktop.jpg');
+	}
+}
+
+.nav-primary {
+	position: fixed;
+	width: 100vw;
+	padding: 20px 40px;
+	background-color: rgba(0,0,0,0.4);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: $zindex-navbar;
+}
+.brand {
+	display: block;
+	width: 200px;
+	height: 60px;
+	background-image: url('../images/thetable-logo.png');
+}
+
+.header-callout {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	max-width: 700px;
+	margin: 100px auto 0 auto;
+}
+.header-title {
+	font-size: 50px;
+	letter-spacing: 0.05em;
+	margin-bottom: 20px;
+}
+
+
+.nav a {
+	background-color: #16B1E5
+}
+
+
+
+.rounded-circle {
+	border-radius: 50%;
+}
+.fancy-shadow {
+	box-shadow: 0 0 0 4px #fff, 0 1px 4px rgba(0,0,0,0.3);
+}
+.media-object {
+	margin-right: 20px;
+}
+
+
+// Justified button groups
+// ----------------------
+
+.btn-group-justified {
+  display: flex;
+  width: 100%;
+  .btn,
+  .btn-group {
+    flex: 1;
+    .btn {
+      width: 100%;
+    }
+    .dropdown-menu {
+      left: auto;
+    }
+  }
+}
+
+
+/// MIssion
+
+.mission {
+	position: relative;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+
+	background-color: $redbg;
+	padding: 70px 10px 85px 10px;
+	border-top: 5px solid #1d0606;
+	h1 {
+		font-size: 44px;
+	}
+	div.textwidget {
+		display: block;
+		margin: 0 auto;
+		max-width: 790px;
+		color: #fff;
+		font-weight: normal;
+	}
+	p {
+		font-size: 26px;
+		font-style: italic;
+		&:after, &:before {
+			content: "";
+			font-size: 130%;
+			padding: 0 5px;
+		}
+		&:after {
+			content: "\201D";
+		}
+		&:before {
+			content: "\201C";
+		}
+		&.content {
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+/// Values
+
+.value-wrapper {
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	padding-bottom: 50px;
+	background-color: #f4f2e9;
+	@include media-breakpoint-up(md) {
+		background-image: url('../images/light-bg.jpg');
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+.values {
+	padding: 60px 0 60px 0;
+	text-align: center;
+	h3 {
+		font-size: 44px;
+		margin-bottom: 30px;
+	}
+	h4 {
+		margin-top: 10px;
+	}
+	color: #707070;
+}
+
+
+
+//Form
+label {
+	font-size: 0.85rem;
+	font-family: $font-family-sans-serif;
+	opacity: 0.7;
+}
+.form-control,
+.form-element {
+	font-family: $font-family-sans-serif;
+}
+
+
+.donation-form {
+	margin: 0 auto;
+	max-width: 720px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+
+// Stripe
+.StripeElement {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  // border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #c9ccd0;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #d9534f;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}

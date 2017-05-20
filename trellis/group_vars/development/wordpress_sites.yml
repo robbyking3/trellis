@@ -1,0 +1,41 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  kaleo.dev:
+    site_hosts:
+      - canonical: kaleo.dev
+    local_path: ../tablechurch # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: robbyking3@gmail.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+  goodoldboys.dev:
+    site_hosts:
+      - canonical: goodoldboys.dev
+    local_path: ../goodoldboysbrewing # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: robbyking3@gmail.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
+  yourebelscrum.dev:
+    site_hosts:
+      - canonical: yourebelscrum.dev
+    local_path: ../yourebelscrum # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: robbyking3@gmail.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false

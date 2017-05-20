@@ -1,0 +1,48 @@
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/production/vault.yml
+
+wordpress_sites:
+  give.tablechurch.ca:
+    site_hosts:
+      - canonical: give.tablechurch.ca
+    local_path: ../tablechurch # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:robbyking3/give.tablechurch.ca.git # replace with your Git repo URL
+    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+  yourebelscrum.com:
+    site_hosts:
+      - canonical: www.yourebelscrum.com
+    local_path: ../yourebelscrum # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:robbyking3/yourebelscrum.com.git # replace with your Git repo URL
+    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+  goodoldboysbrewing.com:
+    site_hosts:
+      - canonical: www.goodoldboysbrewing.com
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:robbyking3/goodoldboysbrewing.com.git # replace with your Git repo URL
+    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+

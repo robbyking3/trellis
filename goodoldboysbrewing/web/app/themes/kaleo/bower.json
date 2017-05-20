@@ -1,0 +1,15 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.4",
+    "jquery.payment": "^3.0.0",
+    "jquery-creditcardvalidator": "^1.1.0",
+    "jquery-validation": "^1.15.1"
+  }
+}

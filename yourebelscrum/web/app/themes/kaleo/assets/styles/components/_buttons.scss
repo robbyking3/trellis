@@ -1,0 +1,15 @@
+.menu-menu-1-container {
+	display: block;
+}
+.nav {
+	float: right;
+}
+.nav a, .main-btn {
+	@extend .btn;
+	@extend .btn-primary;
+	@extend .btn-lg;
+}
+
+.btn, .nav a, .main-btn {
+	font-family: $font-family-sans-serif;
+}
