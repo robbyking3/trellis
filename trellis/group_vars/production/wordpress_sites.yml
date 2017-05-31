@@ -20,6 +20,8 @@ wordpress_sites:
   yourebelscrum.com:
     site_hosts:
       - canonical: www.yourebelscrum.com
+        redirects:
+          - yourebelscrum.com
     local_path: ../yourebelscrum # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:robbyking3/trellis.git # replace with your Git repo URL
     repo_subtree_path: yourebelscrum # relative path to your Bedrock/WP directory in your repo
@@ -34,6 +36,8 @@ wordpress_sites:
   goodoldboysbrewing.com:
     site_hosts:
       - canonical: www.goodoldboysbrewing.com
+        redirects:
+          - goodoldboysbrewing.com      
     local_path: ../goodoldboysbrewing # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:robbyking3/trellis.git # replace with your Git repo URL
     repo_subtree_path: goodoldboysbrewing # relative path to your Bedrock/WP directory in your repo
