@@ -37,7 +37,7 @@ wordpress_sites:
     site_hosts:
       - canonical: www.goodoldboysbrewing.com
         redirects:
-          - goodoldboysbrewing.com      
+          - goodoldboysbrewing.com
     local_path: ../goodoldboysbrewing # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:robbyking3/trellis.git # replace with your Git repo URL
     repo_subtree_path: goodoldboysbrewing # relative path to your Bedrock/WP directory in your repo
